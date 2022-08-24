@@ -795,7 +795,7 @@ library.flags[du]:SetOptions(eP)
 end
 return e7
 end
-setmetatable(library, 
+setmetatable(getgenv().library, 
     {__newindex = function(self, i, v)
         if i == 'Name' then
             dG.Text = "   ".. v
