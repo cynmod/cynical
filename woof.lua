@@ -1,4 +1,4 @@
-local library = {}
+local funky = {}
 local a = {Plrs = "Players", LP = "LocalPlayer", RS = "ReplicatedStorage"}
 local b = setmetatable({}, 
         {__index = function(self, c) return game.GetService(game, c)
@@ -796,7 +796,7 @@ library.flags[du]:SetOptions(eP)
 end
 return e7
 end
-setmetatable(library, 
+setmetatable(funky, 
     {__newindex = function(self, i, v)
         if i == 'Name' then
             dG.Text = "   ".. v
@@ -805,4 +805,4 @@ setmetatable(library,
         rawset(self, i, v)
     end}
 )
-return library
+return funky
