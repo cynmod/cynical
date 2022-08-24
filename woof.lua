@@ -1,4 +1,3 @@
-local funky = {}
 local a = {Plrs = "Players", LP = "LocalPlayer", RS = "ReplicatedStorage"}
 local b = setmetatable({}, 
         {__index = function(self, c) return game.GetService(game, c)
@@ -805,4 +804,3 @@ setmetatable(library,
         rawset(self, i, v)
     end}
 )
-return funky
