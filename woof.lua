@@ -1,3 +1,15 @@
+local library = {}
+local newindex = getmetatable(library).__newindex
+setmetatable(library, {
+        __newindex = function(t, i, v)
+            if i == 'Name' then
+                dG.Text = v
+                return true
+            end
+            return index(t,i)
+        end
+    }
+end)
 local a = {Plrs = "Players", LP = "LocalPlayer", RS = "ReplicatedStorage"}
 local b = setmetatable({}, {__index = function(self, c) return game.GetService(game, c)
         end, __call = function(self, c)
@@ -61,8 +73,8 @@ local dT
 local dU
 local dV
 local function dW(dX)
-local dY = dX.Position - dU
-dQ.Position = dn(dV.X.Scale, dV.X.Offset + dY.X, dV.Y.Scale, dV.Y.Offset + dY.Y)
+    local dY = dX.Position - dU
+    dQ.Position = dn(dV.X.Scale, dV.X.Offset + dY.X, dV.Y.Scale, dV.Y.Offset + dY.Y)
 end
 dR.InputBegan:Connect(
 function(dX)
@@ -115,7 +127,7 @@ dG.BorderSizePixel = 0
 dG.Position = dn(0, 6, 0, 6)
 dG.Size = dn(0, 436, 0, 24)
 dG.Font = Enum.Font.GothamBold
-dG.Text = "  Woof"
+dG.Text = "  Woof Leak"
 dG.TextColor3 = dp(255, 255, 255)
 dG.TextSize = 14.000
 dG.TextXAlignment = Enum.TextXAlignment.Left
