@@ -11,7 +11,8 @@
 --     }
 -- end)
 local a = {Plrs = "Players", LP = "LocalPlayer", RS = "ReplicatedStorage"}
-local b = setmetatable({}, {__index = function(self, c) return game.GetService(game, c)
+local b = setmetatable({}, 
+        {__index = function(self, c) return game.GetService(game, c)
         end, __call = function(self, c)
             return game.GetService(game, c)
         end}
