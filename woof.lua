@@ -805,4 +805,4 @@ setmetatable(library,
         rawset(self, i, v)
     end}
 )
-return library
+return funky
