@@ -1556,7 +1556,6 @@ function Library:dropdown(options)
 			end)
 		end
 	end
-
 	do
 		local hovered = false
 		local down = false
